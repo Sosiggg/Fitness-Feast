@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitnessFeast</title>
+  <link rel="icon" href="FitnessFeast.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sanchez&family=Water+Brush&family=Lexend&family=Sarabun&family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Reset default styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header styles */
+    .header {
+      background-color: #ffffff;
+      padding: 15px 0;
+      border-bottom: 2px solid #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 90px;
+      width: auto;
+      margin-right: 5px;
+    }
+
+    .site-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 55px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    /* Fitness and Feast styling */
+    .fitness {
+      color: #3b5704;
+    }
+
+    .feast {
+      color: #6fa401;
+    }
+
+    /* Navigation styles */
+    .nav-container {
+      background-color: #f5f5f5; /* Change background color */
+    }
+
+    .nav-list {
+      list-style-type: none;
+      margin: 0 auto; /* Center the list */
+      padding: 22px 0; /* Add padding */
+      display: flex;
+      justify-content: center; /* Center the items */
+    }
+
+    .nav-list li {
+      margin-right: 15px;
+    }
+
+    .nav-list li:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    .nav-list li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 17px;
+      text-transform: uppercase;
+      font-family: 'Josefin Sans', sans-serif;
+      transition: color 0.3s, background-color 0.3s; /* Transition both color and background-color */
+    }
+
+    .nav-list li a:hover {
+      color: #6fa401; /* Change text color on hover */
+      background-color: #fff; /* Change background color on hover */
+    }
+
+    /* Content styles */
+    .content {
+      padding: 20px;
+      background-color: #f7f7f7; /* Set background color */
+      display: flex;
+      justify-content: center; /* Center the containers horizontally */
+      flex-wrap: wrap; /* Allow containers to wrap */
+    }
+
+    /* Footer styles */
+    #footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* New container styles */
+    .new-container {
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    /* Combined heading styles */
+    .combined-heading {
+      font-family: 'Sanchez', serif;
+      color: #000;
+      font-size: 18px;
+    }
+
+    .combined-heading span {
+      font-family: 'Water Brush', cursive;
+      color: #6fa401;
+      font-size: 40px;
+      margin-left: 5px;
+    }
+
+    /* Search bar styles */
+    .search-container {
+      display: flex;
+      border: 1px solid #ccc;
+      padding: 0px;
+      margin-left: 390px;
+    }
+
+    .search-input {
+      padding: 6px;
+      font-size: 17px;
+      font-weight: bold;
+      border: none;
+      outline: none; /* Remove outline */
+      font-family: 'Sarabun', sans-serif; /* Apply Sarabun font */
+    }
+
+    .search-button {
+      padding: 10px 15px; /* Equal padding */
+      background: #6fa401; /* Change background color */
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Sarabun', sans-serif; /* Apply Sarabun font */
+      color: #fff; /* Change text color to white */
+    }
+
+    .search-button .search-icon {
+      margin-right: 5px; /* Adjust spacing between icon and text */
+    }
+
+    .search-button:hover {
+      background: #3b5704; /* Change background color on hover */
+    }
+
+    /* Social links styles */
+    .social-links {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px; /* Match padding of search button */
+    }
+
+    .social-link {
+      margin-right: 10px;
+    }
+
+    .social-link i {
+      font-size: 30px; /* Adjust icon size */
+      color: #3b5704;
+    }
+
+    .social-link:hover i {
+      color: #6fa401; /* Change hover color */
+    }
+
+/* Food container styles */
+/* Food container styles */
+.food-container {
+  position: relative; /* Position relative for absolute positioning of overlay */
+  background-color: #f5f5f5; /* Light grey background */
+  width: calc(20% - 10px);
+  height: 380px; /* Set height */
+  border-radius: 0; /* Remove border radius */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex; /* Add */
+  align-items: center; /* Add */
+  justify-content: center; /* Add */
+  flex-grow: 0; /* Prevent flexbox from expanding items */
+  position: relative;
+  margin: 10px; /* Add margin */
+  overflow: hidden; /* Hide overflow to prevent image scaling */
+}
+
+/* Food image styles */
+.food-image {
+  max-width: 100%; /* Make image fit container */
+  max-height: 100%; /* Make image fit container */
+  border-radius: 0; /* Ensure image does not have border radius */
+  width: 100%; /* Set width to fill the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  position: absolute; /* Position absolute for proper stacking */
+  top: 0; /* Position at the top */
+  left: 0; /* Position at the left */
+  transition: opacity 0.5s ease-in-out; /* Add smooth transition */
+}
+
+/* Initially show the first image */
+.food-container .food-image:nth-child(1) {
+  opacity: 1;
+}
+
+/* Hide all images initially */
+.food-container .food-image:nth-child(n+2) {
+  opacity: 0;
+}
+
+/* Overlay styles */
+.food-container::before {
+  content: attr(data-text); /* Use attribute value as content */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark opaque overlay */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  display: flex; /* Center overlay text */
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* Overlay text color */
+  font-size: 40px; /* Overlay text font size */
+  font-weight: bold; /* Make text bold */
+  font-family: 'Lexend', sans-serif; /* Use Lexend font */
+  text-align: center;
+  z-index: 1; /* Ensure overlay is below image */
+}
+
+/* Show overlay on hover */
+.food-container:hover::before {
+  opacity: 1;
+}
+
+.food-container:hover .food-image {
+  animation: slideShow 15s infinite; /* Apply animation on hover */
+}
+
+/* Keyframes for slideshow animation */
+@keyframes slideShow {
+  0% {
+    opacity: 0; /* Start with no opacity */
+  }
+  10% {
+    opacity: 1; /* Fade in at 10% of the animation */
+  }
+  90% {
+    opacity: 1; /* Stay fully visible until 90% of the animation */
+  }
+  100% {
+    opacity: 0; /* Fade out again at the end of the animation */
+  }
+}
+
+
+
+    /* Rectangle for text display */
+    .text-rectangle {
+      position: absolute;
+      bottom: 0; /* Position it at the bottom of the container */
+      left: 50%; /* Position it at the horizontal center */
+      transform: translateX(-50%); /* Center the rectangle horizontally */
+      width: 45%; /* Adjust width as needed */
+      height: 38px; /* Adjust height as needed */
+      background-color: #6fa401; /* Green color */
+      z-index: 2; /* Ensure on top of image */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    /* Text inside the rectangle */
+    .rectangle-text {
+      font-family: 'Sanchez', serif; /* Set font family */
+      color: #fff; /* Text color */
+      font-size: 16px; /* Font size */  
+    }
+    .rectangle-link {
+      text-decoration: none;
+    }
+
+    /* Additional categories styles */
+.additional-categories {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px; /* Add margin to create space */
+  padding: 20px 0; /* Add padding for space around the circles */
+  background-color: #f7f7f7;
+}
+
+.category-container {
+  position: relative; /* Add position relative */
+  margin: 0 10px; /* Adjust margin for spacing between circles */
+  margin-bottom: 5px;
+  transition: transform 0.3s;
+}
+
+.category-container:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.circle {
+  width: 130px; /* Increase circle size */
+  height: 130px; /* Increase circle size */
+  border-radius: 50%;
+  background-color: #6fa401;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add box shadow */
+  transition: transform 0.3s;
+}
+
+    .circle img {
+      max-width: 100%; /* Make sure the image fits inside the circle */
+      max-height: 100%; /* Make sure the image fits inside the circle */
+      border-radius: 50%; /* Ensure the image is circular */
+      object-fit: cover;
+    }
+
+    /* Circle heading styles */
+.circle-heading {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%; /* Ensure full width */
+}
+
+.circle:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+.search-view-container {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  width: calc(100% - 30px); /* Adjusted width */
+  max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+  height: 100px;
+  background-color: #f7f7f7;
+  padding: 15px;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
+
+.search-container-1 {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.search-input-1 {
+  padding: 10px; /* Adjust padding */
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  font-family: 'Sarabun', sans-serif;
+  width: 300px; /* Adjust width as needed */
+}
+
+.search-button-1 {
+  padding: 10px 15px; /* Adjust padding */
+  background: #6fa401;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Sarabun', sans-serif;
+  color: #fff;
+}
+
+.or-text {
+  font-family: 'Water Brush', cursive;
+  margin: 0 30px; /* Adjust margin */
+  font-size: 35px;
+  color: #3b5704;
+}
+
+.view-all-button {
+  padding: 12px 20px;
+  background-color: #6fa401;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0px;
+  transition: background-color 0.3s;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="FitnessFeastHomePage.html" style="text-decoration: none;"><img src="FitnessFeastLogo.png" alt="FitnessFeast Logo"></a>
+        <h1 class="site-title"><a href="FitnessFeastHomePage.html" style="text-decoration: none;"><span class="fitness">Fitness</span><span class="feast">Feast</span></a></h1>
+      </div>
+      <div class="search-container">
+        <input class="search-input" type="text" placeholder="Search Recipes..." name="search">
+        <button class="search-button" type="submit"><i class="fas fa-search search-icon" style="color: white;"></i> Search</button>
+      </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/" class="social-link"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" class="social-link"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <nav class="nav-container">
+    <ul class="nav-list">
+      <li><a href="FitnessFeastHomePage.html">HOME</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">ADVICE</a></li>
+      <li><a href="#">RECIPES</a></li>
+      <li><a href="#">MEAL PLANS</a></li>
+      <li><a href="#">FAVORITES</a></li>
+      <li><a href="#">START NOW</a></li>
+    </ul>
+  </nav>
+  <div class="new-container">
+    <h2 class="combined-heading">NUTRITIOUS RECIPES TAILORED FOR <span>an active and healthy lifestyle.</span></h2>
+  </div>
+<div class="content">
+  <div class="food-container" data-text="Recipe 1">
+    <a href="Bowls-Category.html" class="food-link"></a>
+    <img class="food-image" src="bowl_image.jpg" alt="Bowls-Category">
+    <img class="food-image" src="bowl_image2.jpg" alt="Bowls-Category">
+    <img class="food-image" src="bowl_image3.jpg" alt="Bowls-Category">
+    <div class="text-rectangle">
+      <span class="rectangle-text">BOWLS</span>
+    </div>
+  </div>
+  <!-- Repeat the food container structure for other categories -->
+  <div class="food-container" data-text="Recipe 2">
+    <a href="Salads-Category.html" class="food-link"></a>
+    <img class="food-image" src="salad_image.jpg" alt="Salads-Category">
+    <img class="food-image" src="salad_image2.jpg" alt="Salads-Category">
+    <img class="food-image" src="salad_image3.jpg" alt="Salads-Category">
+    <div class="text-rectangle">
+      <span class="rectangle-text">SALADS</span>
+    </div>
+  </div>
+  <div class="food-container" data-text="Recipe 3">
+    <a href="Smoothies-Category.html" class="food-link"></a>
+    <img class="food-image" src="smoothie_image.jpg" alt="Smoothies-Category">
+    <img class="food-image" src="smoothie_image2.jpg" alt="Smoothies-Category">
+    <img class="food-image" src="smoothie_image3.jpg" alt="Smoothies-Category">
+    <div class="text-rectangle">
+      <span class="rectangle-text">SMOOTHIES</span>
+    </div>
+  </div>
+  <div class="food-container" data-text="Recipe 4">
+    <a href="Wraps-Category.html" class="food-link"></a>
+    <img class="food-image" src="wraps_image.jpg" alt="Wraps-Category">
+    <img class="food-image" src="wraps_image2.jpg" alt="Wraps-Category">
+    <img class="food-image" src="wraps_image3.jpg" alt="Wraps-Category">
+    <div class="text-rectangle">
+      <span class="rectangle-text">WRAPS</span>
+    </div>
+  </div>
+</div>
+
+  <div class="additional-categories">
+    <div class="category-container">
+      <a href="dinner.html" class="circle-link">
+        <div class="circle">
+          <img src="dinner_image.png" alt="Dinner">
+        </div>
+        <div class="circle-heading">DINNER</div>
+      </a>
+    </div>
+    <div class="category-container">
+      <a href="healthy.html" class="circle-link">
+        <div class="circle">
+          <img src="healthy_image.jpg" alt="Healthy">
+        </div>
+        <div class="circle-heading">HEALTHY</div>
+      </a>
+    </div>
+    <div class="category-container">
+      <a href="instant_pot.html" class="circle-link">
+        <div class="circle">
+          <img src="instant_pot_image.jpg" alt="Instant Pot">
+        </div>
+        <div class="circle-heading">INSTANT POT</div>
+      </a>
+    </div>
+    <div class="category-container">
+      <a href="meal_prep.html" class="circle-link">
+        <div class="circle">
+          <img src="meal_prep_image.jpg" alt="Meal Prep">
+        </div>
+        <div class="circle-heading">MEAL PREP</div>
+      </a>
+    </div>
+    <div class="category-container">
+      <a href="quick_easy.html" class="circle-link">
+        <div class="circle">
+          <img src="quick_easy_image.jpg" alt="Quick and Easy">
+        </div>
+        <div class="circle-heading">QUICK AND EASY</div>
+      </a>
+    </div>
+    <div class="category-container">
+      <a href="soups.html" class="circle-link">
+        <div class="circle">
+          <img src="soups_image.jpg" alt="Soups">
+        </div>
+        <div class="circle-heading">SOUPS</div>
+      </a>
+    </div>
+    <div class="category-container">
+      <a href="stir_fries.html" class="circle-link">
+        <div class="circle">
+          <img src="stir_fries_image.jpg" alt="Stir-Fries">
+        </div>
+        <div class="circle-heading">STIR-FRIES</div>
+      </a>
+    </div>
+    <div class="category-container">
+      <a href="vegetarian.html" class="circle-link">
+        <div class="circle">
+          <img src="vegetarian_image.jpg" alt="Vegetarian">
+        </div>
+        <div class="circle-heading">VEGETARIAN</div>
+      </a>
+    </div>
+    <div class="category-container">
+      <a href="vegan.html" class="circle-link">
+        <div class="circle">
+          <img src="vegan_image.jpg" alt="Vegan">
+        </div>
+        <div class="circle-heading">VEGAN</div>
+      </a>
+    </div>
+  </div>
+<div class="search-view-container">
+  <div class="search-container-1">
+    <input class="search-input-1" type="text" placeholder="Search our recipes..." name="search">
+    <button class="search-button-1" type="submit"><i class="fas fa-search search-icon" style="color: white;"></i></button>
+  </div>
+  <span class="or-text">or</span>
+  <a href="#" class="view-all-button">VIEW ALL RECIPES</a>
+</div>
+
+
+
+  <footer id="footer">
+    <!-- Your footer content here -->
+  </footer>
+</body>
+</html>
