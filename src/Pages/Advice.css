@@ -1,0 +1,103 @@
+/* Root variables */
+:root {
+  --primary-color: #6fa400;
+  --secondary-color: #3D5A00;
+  --background-color: #f7f7f7;
+  --text-color: #000;
+  --accent-color: #fff;
+  --border-color: #ccc;
+}
+
+/* Container for advice section */
+.advice-container {
+  margin-top: -50px;
+  margin-bottom: 50px;
+  padding: 80px; /* Adjust padding for better centering */
+  text-align: center;
+  background-color: #3D5A00;
+}
+
+/* Section header styling */
+.section-header {
+  font-size: 50px;
+  font-weight: 800;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 3px;
+  color: #fff;
+  margin-top: 50px;
+  margin-bottom: -5px;
+}
+
+/* Sub-header styling */
+.sub-header {
+  font-size: 20px;
+  font-family: "Noticia Text", serif;
+  font-weight: 200;
+  margin-bottom: 20px;
+  color: rgba(247, 247, 247, 0.85);
+  letter-spacing: 1px;
+}
+
+.advice-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid with minimum width of 250px */
+  gap: 20px; /* Gap between items */
+  margin-top: 20px;
+  padding: 0 20px; /* Padding to prevent items from touching sides */
+  margin-bottom: 30px;
+}
+
+.advice-image-square {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth hover effect */
+  max-width: 100%; /* Ensure square image does not exceed container width */
+}
+
+.advice-image-square:hover {
+  transform: translateY(-5px); /* Move image up slightly on hover */
+}
+
+.advice-image-square img {
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* Ensure image does not exceed its container */
+  aspect-ratio: 1 / 1; /* Ensure square aspect ratio */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px; /* Increase margin for better spacing */
+}
+
+.advice-image-square h4 {
+  margin: 10px 0 5px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800; /* Adjust font weight for better readability */
+  font-size: 15px; /* Adjust font size for better fit */
+  color: var(--secondary-color); /* Adjust text color */
+}
+
+.advice-image-square h4 a {
+  text-decoration: none;
+  color: var(--secondary-color); /* Adjust link color */
+}
+
+.advice-image-square p {
+  margin: 0;
+  color: #666;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300; /* Adjust font weight for better readability */
+  font-size: 14px; /* Adjust font size for better fit */
+}
+
+  @media print {
+    .about-part {
+      page-break-before: always;
+    }
+  }
+  

@@ -1,0 +1,166 @@
+:root {
+  --primary-color: #6fa400;
+  --secondary-color: #3D5A00;
+  --background-color: #f7f7f7;
+  --text-color: #000;
+  --accent-color: #fff;
+  --border-color: #ccc;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  page-break-before: always;
+  background-color: #fff;
+}
+
+.about-part {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  width: 80%;
+  page-break-before: always;
+}
+
+.about-part-ian {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  width: 80%;
+  page-break-before: always;
+}
+
+
+.about-photo {
+  width: 450px;
+  height: 530px;
+  margin: 0px 40px 0px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-photo-ian {
+  width: 450px;
+  height: 530px;
+  margin: 0px 40px -40px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-breadcrumb {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #53634cc7;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 1000;
+}
+
+.about-breadcrumb-link {
+  text-decoration: none;
+  color: #53634cc7;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 1000;
+}
+
+.about-breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text-ian {
+  flex: 1;
+}
+
+.about-text p{
+  text-align: justify;
+  font-family: "Noticia Text", serif;
+}
+
+.about-text-ian p{
+  text-align: justify;
+  font-family: "Noticia Text", serif;
+}
+
+.about-part:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.about-part-ian:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.about-text h3 {
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  margin-top: -10px;
+  margin-bottom: -30px;
+  color: #3D5A00;
+}
+
+.about-text-ian h3 {
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  margin-top: 38px;
+  margin-bottom: -20px;
+  color: #3D5A00;
+}
+
+.intro-text-prefix {
+  font-family: "Hanuman", serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+.styled-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color:  var(--primary-color);
+  font-family: 'Water Brush', cursive;
+}
+
+.intro-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-part {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.about-part-ian {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.about-follow-us-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+  margin-bottom: 0px;
+  background-color: var(--secondary-color);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+@media print {
+  .about-part {
+    page-break-before: always;
+  }
+}

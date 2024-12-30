@@ -1,0 +1,190 @@
+:root {
+    --primary-color: #6fa400;
+    --secondary-color: #3D5A00;
+    --background-color: #f7f7f7;
+    --text-color: #000;
+    --accent-color: #fff;
+    --border-color: #ccc;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .meal-plan-recipes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #F2F2F2;
+    padding: 57px 20px 50px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.featured-mealplan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px; /* Add some space between the image and the text content */
+}
+
+.featured-mealplan img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-mealplan img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.featured-mealplan-title {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.featured-mealplan-name a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.meal-plan-content {
+    text-align: left;
+    max-width: 600px;
+}
+
+.mealplan-breadcrumb {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #a6aca3fb;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 1000;
+}
+
+.mealplan-breadcrumb-link {
+    text-decoration: none;
+    color: #a6aca3fb;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 1000;
+}
+
+.mealplan-breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.meal-plan-content h2 {
+    color: var(--secondary-color);
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
+.meal-plan-content p {
+    line-height: 1.6;
+    text-align: justify;
+    font-family: "Noticia Text", serif;
+    color: rgb(105, 116, 107);
+}
+
+.featured-mealplan-title {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #748678;
+  letter-spacing: 0px;
+}
+
+.featured-mealplan-name {
+  margin-top: 0px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.featured-mealplan-name a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  margin-bottom: 0px;
+}
+
+.featured-mealplan-name a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.all-mealplan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 240px;
+  margin-bottom: 20px;
+}
+
+.all-mealplan-recipe {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  color: #252525;
+  background-color: var(--accent-color);
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.all-mealplan-recipe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.all-mealplan-recipe img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.all-mealplan-recipe-info h4 {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.all-mealplan-recipe-rating {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.all-mealplan-recipe-rating .stars {
+  color: #f39c12;
+  margin-right: 5px;
+  margin-top: -2px;
+}
+
+.reviews {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #666;
+}

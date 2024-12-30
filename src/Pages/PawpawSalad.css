@@ -1,0 +1,13 @@
+.dish-name-paw {
+    display: flex;
+    font-size: 35px;
+    text-align: center;
+    margin-left: -344px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 750;
+    font-style: normal;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    justify-content: center;
+  }

@@ -1,0 +1,437 @@
+.CBP-photo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 1210px;
+  position: relative;
+  margin-top: 0px;
+}
+
+.pasta-photo {
+  width: 851px;
+  height: 563px;
+  border-radius: 3px;
+  box-shadow:
+    0px 0px 10px rgba(0, 0, 0, 0.3),
+    0px 0px 20px rgba(0, 0, 0, 0.2),
+    0px 0px 30px rgba(0, 0, 0, 0.1),
+    0px 0px 40px rgba(0, 0, 0, 0.05),
+    inset 0px 0px 10px rgba(255, 255, 255, 0.5),
+    inset 0px 0px 20px rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.nutrition-info {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 23.5%;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.CBP-circle {
+  display: flex;
+  flex-direction: column; /* Change to column layout */
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  font-size: 30px; /* Decreased font size to fit two lines */
+  width: 50px; /* Increased circle width */
+  height: 50px; /* Increased circle height */
+  text-align: center;
+  padding: 16px; /* Adjusted padding */
+  margin-bottom: 30px; /* Added more margin between circles */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.CBP-circle:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.CBP-circle span {
+  font-size: 14px;
+}
+
+.CBP-circle br {
+  display: none;
+}
+
+  .dish-name {
+    display: flex;
+    font-size: 35px;
+    text-align: center;
+    margin-left: -470px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 750;
+    font-style: normal;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+  
+  .tags-logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: -565px;
+    margin-bottom: 18px;
+    justify-content: center;
+  }
+  
+  .tags {
+    display: flex;
+  }
+  
+  .tag-box {
+    background-color: #8bc60caf;
+    padding: 10px 15px 8px 15px;
+    margin-right: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: "Josefin Sans", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .tag-link {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent .tag-box */
+  }
+
+  .tag-link:hover .tag-box {
+    background-color: #4b6b05e8; /* Slightly darker pastel green */
+    color: #ffffff; /* White text */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slight shadow */
+  }
+  
+  .recipe-description-container {
+    width: 828px; /* Adjust width as needed */
+    margin: 20px auto; /* Center horizontally and add top margin */
+    border: 2px solid #ccc; /* Rectangle box */
+    padding: 0px 15px; /* Add padding for content */
+    display: flex;
+    justify-content: center;
+  }
+
+  .recipe-description {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #343434;
+    font-family: "Noticia Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+  }
+  
+  .recipe-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+  }
+  
+  .time-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+  }
+  
+  .alarm-clock-icon {
+    width: 30px;
+    height: auto;
+    margin-top: 1px;
+    margin-right: 20px;
+    color: #63a310d1;
+  }
+  
+  .time-box {
+    background-color: #70a400d0;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  
+  .difficulty {
+    background-color: #4b6b05e8;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-left: 203px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+  }
+
+  .ingredients {
+    margin-top: 30px;
+    font-family: "Poppins", sans-serif;
+  }
+
+.ingredients table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ingredients td {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;  /* Ensure text is aligned left */
+}
+
+.ingredients td:first-child {
+  font-weight: 700;
+}
+
+/*** Enhanced Table Styles ***/
+.table-fill {
+  background: #f0f7e9; /* Very light green/white background */
+  border-radius: 3px;
+  border-collapse: collapse;
+  margin: auto;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 863px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+th {
+  color: #ffffff; /* Very light green/white background */
+  background: #5a8300da; /* Pastel green */
+  border-bottom: hidden; /* Slightly darker pastel green */
+  border-right: 1px solid #486607; /* Slightly darker pastel green */
+  font-size: 23px;
+  font-weight: 100;
+  padding: 24px;
+  text-align: center;
+  vertical-align: middle;
+  border-top: hidden;
+  font-weight: 800;
+}
+
+th:first-child {
+  border-top-left-radius: 3px;
+}
+
+th:last-child {
+  border-top-right-radius: 3px;
+  border-right: none;
+}
+
+tr {
+  border-top: 1px solid #8cbf5d; /* Slightly darker pastel green */
+  border-bottom: 1px solid #8cbf5d; /* Slightly darker pastel green */
+  color: #3d5a00; /* Dark green for text */
+  font-size: 16px;
+  font-weight: normal;
+}
+
+tr:hover td {
+  background: #d9f2c4; /* Lighter shade for hover effect */
+  color: #3d5a00; /* Dark green for text */
+}
+
+tr:nth-child(odd) td {
+  background: #f0f7e9; /* Very light green/white background */
+}
+
+tr:nth-child(odd):hover td {
+  background: #d9f2c4; /* Lighter shade for hover effect */
+}
+
+tr:last-child {
+  border-bottom: hidden;
+}
+
+td {
+  background: #f0f7e9; /* Very light green/white background */
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 18px;
+  border-right: 1px solid #8cbf5d; /* Slightly darker pastel green */
+}
+
+td:last-child {
+  border-right: 0;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+.steps-method {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 900;
+  font-size: 19px;
+  margin-bottom: 10px;
+  margin-left: -710px;
+}
+
+.steps-container {
+  width: 828px; /* Same width as recipe-description-container */
+  margin: 20px auto; /* Center horizontally and add top margin */
+  margin-top: 0px;
+  border: 2px solid #ccc; /* Rectangle box */
+  padding: 20px 20px 10px 20px; /* Add padding for content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.steps-description {
+  margin-bottom: 15px; /* Space between steps */
+  text-align: justify; /* Justify text within each step */
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-left: 5px;
+}
+
+.steps-description b {
+  display: inline-block;
+  width: 100%; /* Ensure bold text takes full width for alignment */
+  margin-bottom: 5px; /* Space between step number and description */
+  font-family: "Poppins", sans-serif;
+}
+
+.checkbox-container {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+.completed-step {
+  /* Your styles to indicate completed steps */
+  text-decoration: line-through; /* Example: Strikethrough text for completed steps */
+  color: #888; /* Example: Dim text color for completed steps */
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 8px; /* Adjust as needed to create space between checkbox and label */
+  width: 18px; /* Set the width and height for the custom checkbox */
+  height: 18px;
+  border: 2px solid #3d5a00; /* Green border color */
+  background-color: white; /* White background */
+  border-radius: 4px; /* Rounded corners */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.checkbox-container label {
+  margin-left: 4px; /* Adjust as needed to create space between checkbox and label */
+}
+
+/* Styles for the nutritional-info-container */
+.nutritional-info-container {
+  font-family: Arial, sans-serif;
+  max-width: 828px; /* Adjust as needed */
+  margin: 0 auto; /* Center align */
+  padding: 20px 20px 30px 20px;
+  background-color: #f5f5f5;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center align text */
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the header */
+.nutritional-info-container h2 {
+  font-size: 24px;
+  color: #3d5a00;
+}
+
+.nutritional-info-container h2 span {
+  font-size: 14px;
+  color: #3e5a00b3;
+}
+
+/* Styles for the nutrition list */
+.nutritional {
+  margin-top: 20px; /* Add space above the list */
+  text-align: left; /* Align text within the grid to the left */
+}
+
+.nutritional ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: max-content 1fr; /* Adjust for max-width of first column */
+  gap: 10px; /* Increased gap between grid items */
+  padding-left: 262px; /* Added padding to the left to align text */
+  justify-items: start; /* Align items to the start (left-aligned) */
+}
+
+.nutritional li {
+  font-size: 16px; /* Adjust font size as needed */
+  line-height: 1.6; /* Increase line height for readability */
+  text-align: center; /* Align text within list items to the center */
+}
+
+.nutritional .big-nut {
+  font-weight: bold;
+  color: #70a400;
+}
+
+/* Styles for the guide-info section */
+.guide-info {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+  text-align: left; /* Align text left */
+}
+
+
+/* Responsive Design for Table */
+@media (max-width: 768px) {
+  .table-container {
+    width: 100%;
+    margin: 0;
+    overflow-x: auto;
+  }
+
+  .ingredients td {
+    padding: 8px 8px;
+  }
+}
+
