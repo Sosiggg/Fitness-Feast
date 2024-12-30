@@ -2,7 +2,21 @@
 # Fitness Feast
 
 ## Description
-**Fitness Feast** is a recipe website designed for fitness-focused individuals. The platform offers a wide variety of recipes, each complete with nutritional facts, calorie counts, and categorized to meet specific fitness goals. This project, inspired by the renowned website [Pinch of Yum](https://pinchofyum.com/), was developed using React.js. While the user interface improves upon the original design, with enhancements to layout and responsiveness, the project is currently optimized for desktop devices. The mobile-responsive version is in progress, and further updates are planned to expand the feature set. This project is still in the development phase, and contributions are welcome.
+**Fitness Feast** is a recipe website designed for fitness-focused individuals. The platform offers a wide variety of recipes, each complete with nutritional facts, calorie counts, and categorized to meet specific fitness goals. This project, inspired by the renowned website [Pinch of Yum](https://pinchofyum.com/), was developed using **React.js**, a popular JavaScript library for building user interfaces. 
+
+The project includes the following key features:
+- Recipe display with detailed nutritional facts
+- Categorization of recipes based on fitness goals (e.g., weight loss, muscle gain, etc.)
+- User-friendly interface with a focus on a clean and modern design
+- The website is currently optimized for **desktop** devices, and mobile responsiveness is under development.
+
+While the project is still in its early stages and is a work in progress, it has been designed to improve upon the layout and UI of the original source of inspiration.
+
+## Technologies Used
+- **Frontend:** React.js (JavaScript library)
+- **Styling:** CSS
+- **State Management:** React Hooks
+- **Package Manager:** npm
 
 ## Installation
 To install the project locally, follow these steps:
