@@ -504,7 +504,6 @@ body {
   align-items: center;
   margin-bottom: 2px;
   box-sizing: border-box;
-  p
 }
 
 .button-recipe-collection {
@@ -931,7 +930,7 @@ hr {
 
 .image-square {
   display: flex;
-  position: relative;s
+  position: relative;
   justify-content: center;
   margin: 0 8px;
 }
